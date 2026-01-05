@@ -40,7 +40,6 @@ for key in keys:
         else:
             print(f"used/valid - {key}")
             valid_keys.append(key)
-            
     except Exception as e:
         print(f"error → {key}")
     time.sleep(2)
