@@ -79,8 +79,4 @@ If you want, I can:
 - Add command-line flags for concurrency, rate limits, or dry-run mode.
 - Add a small GUI/terminal widget (Tkinter or textual) to run checks interactively.
 
-License
 
-No license is included. Add a `LICENSE` file if you want to define usage terms.
-
-If you want me to add any of the extensions above (examples, flags, a small Python widget UI), tell me which and I'll implement it.
