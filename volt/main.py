@@ -26,18 +26,15 @@ def register_account(email, password, username, invite):
         }
     )
     return response.status_code, response.text
-
 print("\nvolt.bz key checker/account creator with invite")
 
 email = input("enter your email plz: ")
 password = input("enter your password plz: ")
 username = input("enter your username plz: ")
 print("\nloading invite keys...")
-
 with open("invites.txt") as f:
     invites = [line.strip() for line in f if line.strip()]
 print(f"found {len(invites)} invite codes to check\n")
-
 valid_count = 0
 invalid_count = 0
 for invite in invites:
@@ -60,8 +57,7 @@ for invite in invites:
             print(f"unknown status {status} - {invite}")
     except Exception as e:
         print(f"error checking {invite}")
-    time.sleep(1)
+    time.sleep(2)
 print(f"results: {valid_count} valid, {invalid_count} invalid")
-
 if valid_count > 0:
     print("valid accounts saved to valid_accounts.txt")
