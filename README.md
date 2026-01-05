@@ -62,8 +62,6 @@ Output files
 
 Security, ethics, and safety
 
-- Inspect the source in `seliware/main.py` and `volt/main.py` before running.
-- These scripts make automated requests to third-party services and attempt account creation; ensure you have explicit permission to test against those endpoints.
 - Avoid exposing real credentials. `volt/main.py` prompts for email/password/username and will save those credentials to `valid_accounts.txt` if an account is created — treat that file as sensitive.
 
 Notes about behavior
@@ -71,12 +69,5 @@ Notes about behavior
 - Both scripts include a 2-second `time.sleep(2)` between requests to throttle activity.
 - The scripts use simple heuristics (status codes and response text) to decide validity; they do not perform retries or robust error handling.
 
-Extending this README
-
-If you want, I can:
-
-- Add sample `keys.txt`/`invites.txt` templates.
-- Add command-line flags for concurrency, rate limits, or dry-run mode.
-- Add a small GUI/terminal widget (Tkinter or textual) to run checks interactively.
 
 
